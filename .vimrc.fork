@@ -1,8 +1,8 @@
 """""""""""""""""""""""""""""
 " => Set font and font-size
 """""""""""""""""""""""""""""
-set gfn=Monaco:h16
-colorscheme desert
+"set gfn=Monaco:h16
+"colorscheme desert
 
 """""""""""""""""""""""""""""
 " => Quick edit
@@ -13,15 +13,6 @@ map <space> /
 " Begining & End of line in Normal mode
 noremap H ^
 noremap L g_
-
-" Run PHP scripts
-nmap <leader>p :!php %<cr>
-
-" Run PHP syntax scripts
-nmap <leader>l :!php -l %<cr>
-
-" Run Ruby scripts
-nmap <leader>r :!ruby %<cr>
 
 " Remove the Windows ^M - when the encodings gets messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
