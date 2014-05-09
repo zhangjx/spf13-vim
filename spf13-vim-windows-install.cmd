@@ -7,10 +7,10 @@ IF NOT EXIST "%APP_DIR%" (
 ) ELSE (
     @set ORIGINAL_DIR=%CD%
     echo updating spf13-vim
-    chdir /d "%APP_DIR%" 
+    chdir /d "%APP_DIR%"
     call git pull
     chdir /d "%ORIGINAL_DIR%"
-    call cd "%APP_DIR%" 
+    call cd "%APP_DIR%"
 )
 
 call mklink "%HOME%\.vimrc" "%APP_DIR%\.vimrc"
@@ -35,4 +35,3 @@ IF NOT EXIST "%HOME%/.vim/bundle/vundle" (
 )
 
 call vim -u "%APP_DIR%/.vimrc.bundles" +BundleInstall! +BundleClean +qall
-
