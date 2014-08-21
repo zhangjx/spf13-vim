@@ -21,17 +21,6 @@ Great care has been taken to ensure that each plugin plays nicely with others, a
 
 Lastly (and perhaps, most importantly) It is completely cross platform. It works well on Windows, Linux and OSX without any modifications or additional configurations. If you are using [MacVim] or Gvim additional features are enabled. So regardless of your environment just clone and run.
 
-# spf13-vim 3.0
-January 2012 spf13-vim released it's third major iteration. **This is important as it requires a reinstall**, but trust me it's worth it.
-
-The biggest change is the switch from using git submodules to using the excellent [Vundle] system. While git submodules seemed like a good idea at the time, it wasn't. It was always problematic. Additionally because a submodule points to a refspec and not a branch, it was a constant maintenance nightmare to keep everything up to date.
-
-[Vundle] has an excellent system built on the same principles as Pathogen, but with an integrated plugin management system that is Git and Github aware.
-
-We have also changed out most of the plugins in favor of newer more stable alternatives. Additionally we have significantly reduced the number of plugins requiring python or ruby.
-
-The goal has always been to add functionality without changing all the features, functionality and keystrokes we all love. Using spf13-vim we've kept all the default behaviors (by and large), so if you ever find yourself on a vanilla environment you'll feel right at home.
-
 # Installation
 
 ## Linux, \*nix, Mac OSX Installation
@@ -66,6 +55,17 @@ _Note: The spf13.vim package will install Vim also! _
 If you want to install [msysgit], [Curl] and [spf13-vim] individually, follow the directions below.
 
 ### Installing dependencies
+
+#### Install [Vim]
+
+After the installation of Vim you must add a new directory to your environment variables path to make it work with the script installation of spf13.
+
+Open Vim and write the following command, it will show the installed directory:
+
+    :echo $VIMRUNTIME
+    C:\Program Files (X86)\Vim\vim74
+
+Then you need to add it to your environment variable path. After that try execute `vim` within command prompt (press Win-R, type `cmd`, press Enter) and you’ll see the default vim page.
 
 #### Install [msysgit]
 
@@ -191,7 +191,14 @@ and `.vimrc.bundles.fork` files in the root of their fork.  The load order for t
 
 See `.vimrc.bundles` for specifics on what options can be set to override bundle configuration. See `.vimrc.before` for specifics
 on what options can be overridden. Most vim configuration options should be set in your `.vimrc.fork` file, bundle configuration
-needs to be set in your `.vimrc.bundles.fork` file.
+needs to be set in your `.vimrc.bundles.fork` file. 
+
+You can specify the default bundles for your fork using `.vimrc.before.fork` file. Here is how to create an example `.vimrc.before.fork` file 
+in a fork repo for the default bundles.
+```bash
+    echo let g:spf13_bundle_groups=['general', 'programming', 'misc', 'youcompleteme'] >> .vimrc.before.fork
+```
+Once you have this file in your repo, only the bundles you specified will be installed during the first installation of your fork.
 
 You may also want to update your `README.markdown` file so that the `bootstrap.sh` link points to your repository and your `bootstrap.sh`
 file to pull down your fork.
@@ -399,7 +406,7 @@ Tabularize lets you align statements on their equal signs and other characters
 
 spf13-vim includes the Tagbar plugin. This plugin requires exuberant-ctags and will automatically generate tags for your open files. It also provides a panel to navigate easily via tags
 
-**QuickStart** `CTRL-]` while the cursor is on a keyword (such as a function name) to jump to it's definition.
+**QuickStart** `CTRL-]` while the cursor is on a keyword (such as a function name) to jump to its definition.
 
 **Customizations**: spf13-vim binds `<Leader>tt` to toggle the tagbar panel
 
