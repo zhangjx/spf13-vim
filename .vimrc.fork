@@ -36,7 +36,7 @@ au BufNewFile,BufReadPost *.js setl shiftwidth=2 tabstop=2 softtabstop=2 expandt
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 au BufNewFile,BufReadPost *.md setl shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 
-autocmd FileType ruby,eruby,yaml setl foldmethod=manual
+autocmd FileType ruby,eruby,yaml,php setl foldmethod=manual
 
 """""""""""""""""""""""""""""
 " => Vimwiki
