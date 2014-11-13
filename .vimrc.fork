@@ -4,6 +4,7 @@
 "set gfn=Monaco:h16
 "colorscheme desert
 
+
 """""""""""""""""""""""""""""
 " => Quick edit
 """""""""""""""""""""""""""""
@@ -16,6 +17,7 @@ noremap L g_
 
 " Remove the Windows ^M - when the encodings gets messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+
 
 """""""""""""""""""""""""""""
 " => Auto tab
@@ -37,6 +39,24 @@ au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 tabstop=2 softtabstop=2 exp
 au BufNewFile,BufReadPost *.md setl shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 
 autocmd FileType ruby,eruby,yaml,php setl foldmethod=manual
+
+
+"""""""""""""""""""""""""""""
+" => Airline
+"""""""""""""""""""""""""""""
+" Set bufferline filename"
+let g:airline_section_c = '%t'
+
+" Enable modified detection
+"let g:airline_detect_modified = 1
+
+
+"""""""""""""""""""""""""""""
+" => Bufferline
+"""""""""""""""""""""""""""""
+" denotes whether bufferline should automatically echo to the command bar
+let g:bufferline_echo = 0
+
 
 """""""""""""""""""""""""""""
 " => Vimwiki
