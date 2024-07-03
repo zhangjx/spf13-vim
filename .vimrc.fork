@@ -41,6 +41,30 @@ au BufNewFile,BufReadPost *.md setl shiftwidth=2 tabstop=2 softtabstop=2 expandt
 autocmd FileType ruby,eruby,yaml,php setl foldmethod=manual
 
 
+"""""""""""""""""""""""""""""
+" => Airline
+"""""""""""""""""""""""""""""
+" Set Airline theme
+let g:airline_theme = 'solarized'
+
+" Set the separator used on the left side >
+let g:airline_left_sep='>'
+
+" Set the separator used on the right side >
+let g:airline_right_sep='<'
+
+" Enable modified detection
+let g:airline_detect_modified = 1
+
+" Enable paste detection
+let g:airline_detect_paste=1
+
+" Integrating with powerline fonts
+"let g:airline_powerline_fonts = 1
+
+" Set bufferline filename"
+let g:airline_section_c = '%t'
+
 
 """""""""""""""""""""""""""""
 " => Bufferline
