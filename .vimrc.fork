@@ -2,7 +2,7 @@
 " => Set font and font-size
 """""""""""""""""""""""""""""
 "set gfn=Monaco:h16
-"colorscheme desert
+colorscheme solarized
 
 
 """""""""""""""""""""""""""""
@@ -40,15 +40,6 @@ au BufNewFile,BufReadPost *.md setl shiftwidth=2 tabstop=2 softtabstop=2 expandt
 
 autocmd FileType ruby,eruby,yaml,php setl foldmethod=manual
 
-
-"""""""""""""""""""""""""""""
-" => Airline
-"""""""""""""""""""""""""""""
-" Set bufferline filename"
-let g:airline_section_c = '%t'
-
-" Enable modified detection
-"let g:airline_detect_modified = 1
 
 
 """""""""""""""""""""""""""""

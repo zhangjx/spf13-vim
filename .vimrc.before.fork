@@ -1,2 +1,20 @@
+"""""""""""""""""""""""""""""
 " Set Bundle Environment
+"""""""""""""""""""""""""""""
 let g:spf13_bundle_groups=['general', 'neocomplete', 'programming', 'javascript', 'html', 'misc']
+
+
+"""""""""""""""""""""""""""""
+" => Airline
+"""""""""""""""""""""""""""""
+" Set Airline theme
+let g:airline_theme = 'solarized'
+
+" Integrating with powerline fonts
+let g:airline_powerline_fonts = 1
+
+" Set bufferline filename"
+let g:airline_section_c = '%t'
+
+" Enable modified detection
+"let g:airline_detect_modified = 1
