@@ -27,19 +27,19 @@ To make all the plugins work, specifically [neocomplete](https://github.com/Shou
 
 ## Linux, \*nix, Mac OSX Installation
 
-The easiest way to install spf13-vim is to use our [automatic installer](http://t.cn/8seYbTD) by simply copying and pasting the following line into a terminal. This will install spf13-vim and backup your existing vim configuration. If you are upgrading from a prior version (before 3.0) this is also the recommended installation.
+The easiest way to install spf13-vim is to use our [automatic installer](https://j.mp/spf13-vim3) by simply copying and pasting the following line into a terminal. This will install spf13-vim and backup your existing vim configuration. If you are upgrading from a prior version (before 3.0) this is also the recommended installation.
 
 *Requires Git 1.7+ and Vim 7.3+*
 
 ```bash
 
-    curl http://t.cn/8seYbTD -L > spf13-vim.sh && sh spf13-vim.sh
+    curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh
 ```
 
 If you have a bash-compatible shell you can run the script directly:
 ```bash
 
-    sh <(curl http://t.cn/8seYbTD -L)
+    sh <(curl https://j.mp/spf13-vim3 -L)
 ```
 
 ## Installing on Windows
@@ -112,7 +112,7 @@ The simpliest (and safest) way to update is to simply rerun the installer. It wi
 
 ```bash
 
-    curl http://t.cn/8seYbTD -L -o - | sh
+    curl https://j.mp/spf13-vim3 -L -o - | sh
 
 ```
 

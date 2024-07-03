@@ -13,7 +13,6 @@ die() {
 
 rm $HOME/.vimrc
 rm $HOME/.vimrc.bundles
-rm -rf $HOME/.vim/bundle
 rm $HOME/.vim
 
 rm -rf $app_dir
