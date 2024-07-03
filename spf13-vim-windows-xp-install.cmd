@@ -1,11 +1,11 @@
 REM    Copyright 2014 Steve Francia
-REM
+REM 
 REM    Licensed under the Apache License, Version 2.0 (the "License");
 REM    you may not use this file except in compliance with the License.
 REM    You may obtain a copy of the License at
-REM
+REM 
 REM        http://www.apache.org/licenses/LICENSE-2.0
-REM
+REM 
 REM    Unless required by applicable law or agreed to in writing, software
 REM    distributed under the License is distributed on an "AS IS" BASIS,
 REM    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -33,7 +33,7 @@ REM    limitations under the License.
     chdir /d "%ORIGINAL_DIR%"
 ) else (
     echo cloning spf13-vim
-    call git clone -b master git://github.com/zhangjx/spf13-vim.git "%APP_PATH%"
+    call git clone -b 3.0 git://github.com/spf13/spf13-vim.git "%APP_PATH%"
 )
 
 @if not exist  "%APP_PATH%\.vim\bundle" call mkdir "%APP_PATH%\.vim\bundle"
